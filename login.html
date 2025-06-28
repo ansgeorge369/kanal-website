@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register - Kanal</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Kanal Biriyani</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="form-wrapper">
+            <h2 id="form-title">Register to Get 10% Off!</h2>
+
+            <form id="auth-form">
+                <div class="error" id="error-msg"></div>
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Password (min 8 characters)" required minlength="8" />
+                <button type="submit" id="submit-btn">Register</button>
+            </form>
+
+            <button class="toggle-btn" id="toggle-btn">Already have an account? Login</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kanal Biriyani</p>
+    </footer>
+
+    <script>
+        const formTitle = document.getElementById('form-title');
+        const toggleBtn = document.getElementById('toggle-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const errorMsg = document.getElementById('error-msg');
+        const authForm = document.getElementById('auth-form');
+
+        let isLogin = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isLogin = !isLogin;
+            formTitle.textContent = isLogin ? "Login to Your Account" : "Register to Get 10% Off!";
+            submitBtn.textContent = isLogin ? "Login" : "Register";
+            toggleBtn.textContent = isLogin ? "New user? Register here" : "Already have an account? Login";
+            errorMsg.textContent = "";
+        });
+
+        authForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (password.length < 8) {
+                errorMsg.textContent = "Password must be at least 8 characters long.";
+                return;
+            }
+
+            alert(isLogin ? "Logged in successfully!" : "Registered successfully! Enjoy 10% off.");
+            authForm.reset();
+        });
+    </script>
+
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

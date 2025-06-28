@@ -1,0 +1,465 @@
+/* Base reset */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #ff6f00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffe0b2;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("../images/hero-bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* dark overlay */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #128C7E;
+}
+
+/* Menu Sections */
+.menu-section {
+    padding: 40px 20px;
+    background-color: #fff8f0;
+}
+
+.menu-section:nth-child(even) {
+    background-color: #fff2e0;
+}
+
+.menu-section h2 {
+    text-align: center;
+    color: #e65100;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.menu-section p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* WhatsApp order section per menu group */
+.order-section-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.order-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #128C7E;
+}
+
+/* App Promo Section */
+.app-promo {
+    background-color: #fff3e0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.app-promo h2 {
+    color: #e65100;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.app-promo p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.app-promo .btn {
+    background-color: #ff6f00;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.app-promo .btn:hover {
+    background-color: #e65100;
+}
+
+/* Why Kanal Section */
+.why-kanal {
+    background-color: #fff8f0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why-kanal h2 {
+    font-size: 28px;
+    color: #d84315;
+    margin-bottom: 20px;
+}
+
+.why-kanal ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.why-kanal li {
+    font-size: 18px;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.why-kanal li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #388e3c;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6f00;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fffde7;
+    text-decoration: underline;
+}
+
+.form-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff8f0;
+}
+
+form input,
+form button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #ff6f00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e65100;
+}
+
+.form-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff8f0;
+}
+
+form input,
+form button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #ff6f00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e65100;
+}
+
+.form-section {
+    padding: 40px 20px;
+    background-color: #fffbe6;
+    text-align: center;
+}
+
+.form-section h2 {
+    color: #e65100;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+iframe {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* ✅ This line is crucial */
+    z-index: 1;
+    /* ✅ This ensures it's clickable */
+}
+
+.contact-section {
+    padding: 60px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.hero::before {
+    pointer-events: none;
+}
+
+.form-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Cart Page Styling */
+.cart-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cart-item input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#cart-total {
+    color: #e65100;
+    font-size: 24px;
+}
+
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #512d25;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#scrollBtn:hover {
+    background-color: #ff6f00;
+}
+
+/* Maintenance Popup */
+/* Add to style.css */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* darker background */
+    z-index: 9999;
+    /* ensure it's above all elements */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    max-width: 90%;
+    font-size: 16px;
+    color: #333;
+    animation: popupFade 0.3s ease-in-out;
+}
+
+.popup-content button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Optional: Fade animation */
+@keyframes popupFade {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-logo {
+    height: 50px;
+    width: auto;
+    border-radius: 6px;
+    object-fit: contain;
+}

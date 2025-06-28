@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KANAL BIRIYANI</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- ✅ Maintenance Popup -->
+    <div id="maintenance-popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <p><strong>Website under maintenance.</strong><br>
+                Please place your orders through the mobile application.<br>
+                We regret the inconvenience caused.
+            </p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logoforapp.jpg" alt="Kanal Logo" class="site-logo" />
+            <h1>KANAL BIRIYANI</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Delicious Meals Delivered To You</h2>
+            <p>Order freshly made biriyanis, snacks, and shakes right to your doorstep.</p>
+            <a href="menu.html" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <section class="app-promo">
+        <h2>Download Our App</h2>
+        <p>Get exclusive offers, track orders, and refer friends via the KANAL app.</p>
+        <a href="apk/Kanal_Biriyani.apk" class="btn" download>Download APK</a>
+    </section>
+
+    <section class="why-kanal">
+        <h2>Why Choose Kanal?</h2>
+        <ul>
+            <li>✅ Authentic Dum Biriyani with Kaima and Basmati rice</li>
+            <li>✅ Freshly prepared shakes & snacks</li>
+            <li>✅ Dine-in, takeout & delivery options</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 KANAL BIRIYANI | <a href="mailto:contact@kanalkitchen.com">contact@kanalkitchen.com</a></p>
+    </footer>
+
+    <!-- ✅ Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollBtn");
+
+        window.onscroll = function () {
+            scrollBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ✅ Maintenance popup logic
+        window.onload = function () {
+            const popup = document.getElementById('maintenance-popup');
+            if (popup) popup.style.display = 'flex';
+        };
+
+        function closePopup() {
+            document.getElementById('maintenance-popup').style.display = 'none';
+        }
+    </script>
+
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
